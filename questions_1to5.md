@@ -11,7 +11,7 @@ A[1] = (int)&A[0];
 f = (int)&A[0] + A[1]; // 2*(int)&A[0]  
 
 ## Question 3
-| All in decimal  | Instruction | Type | Opcode | rs | rt | rd | Immed. | Funct |
+| All in hex      | Instruction | Type | Opcode | rs | rt | rd | Immed. | Funct |
 |:---------------:|:-----------:|:----:|:------:|:--:|:--:|:--:|:------:|:-----:|
 |addi $t0, $s6, 4 |addi         |I type|8       |22  |8   |N/A |4       |N/A    |
 |add $t1, $s6, $0 |add          |R type|0       |0   |22  |9   |N/A     |32     |
