@@ -28,5 +28,5 @@ load word, I type instruction
 jal can access from 0x20000000 to 0x2FFFFFFC 
 
 ### Part b
-0x20000000 – 0x00020000 and 0x20000000 + 0x0001fffc 
+0x20000000 – 0x00020000 and 0x20000000 + 0x0001fffc  
 beq can access from 0x1FFE0000 to 0x2001FFFC2 
