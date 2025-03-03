@@ -5,10 +5,10 @@ addi $t0, $s2, –5
 add $s0, $s1, $t0 
 
 ## Question 2
-int f; 
-int A[5]; 
-A[1] = (int)&A[0]; 
-f = (int)&A[0] + A[1]; // 2*(int)&A[0] 
+int f;  
+int A[5];  
+A[1] = (int)&A[0];  
+f = (int)&A[0] + A[1]; // 2*(int)&A[0]  
 
 ## Question 3
 | All in decimal  | Instruction | Type | Opcode | rs | rt | rd | Immed. | Funct |
