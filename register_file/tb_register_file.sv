@@ -65,16 +65,18 @@ module tb_register_file;
     end
 
     initial begin : apply_stimuli
-        for (integer i = 0; i < 2**ADDR_WIDTH; i=i+1) begin
-            repeat (1) @(posedge clk) addr <= i; enable <= 1; write_en<=1; write_data <= $random;
+        for (int i = 0; i < DEPTH; i=i+1) begin
+            enable <= 1; write_en<=1; write_data <= $random;
+            repeat (1) @(posedge clk) addr <= i;
             $display($time, "ns\tclk=%b,\trst=%b,\tenable=%b,\taddr=%h,\twrite_data=%h,\twrite_en=%b,\tread_data=%h", clk, rst, enable, addr, write_data, write_en, read_data);
             #20;
         end
-        for (integer i = 0; i < 2**ADDR_WIDTH; i=i+1) begin
+        for (int i = 0; i < DEPTH; i=i+1) begin
             repeat (1) @(posedge clk) addr <= i;
             $display($time, "ns\tclk=%b,\taddr=%h,\tread_data=%h", clk, addr, read_data);
             #20;
         end
+        #20;
         $finish;
     end
 

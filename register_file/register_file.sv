@@ -55,7 +55,7 @@ module register_file
         end
     endgenerate
 
-    always_ff @(posedge clk) begin
+    always @(posedge clk) begin
         read_data <= mem_internal[addr];
     end
 endmodule
